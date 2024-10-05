@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luku Moto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="popup-ad" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Monthly Offer!</h2>
+            <img src="pics/2024-Sexy.avif" alt="Product Name" class="product-image">
+            <p><strong>2024 Sexy High Heels New Women Pumps Comfort</strong></p>
+            <p>Price: Ksh <span id="product-price">1,000.00</span></p>
+            <p>Remaining Stock: <span id="remaining-stock">10</span></p>
+            <div id="countdown"></div>
+        </div>
+    </div>
+    
+
+    <header>
+        <video autoplay muted loop class="header-video">
+            <source src="https://cdn.dribbble.com/userupload/7439014/file/large-aba373140fa87c6bc2719afeb77b6007.mp4" type="video/mp4"> <!-- Replace with your video URL -->
+            Your browser does not support the video tag.
+        </video>
+        <h1>Welcome to Luku Moto</h1>
+       
+    </header>
+    
+
+    <section id="welcome">
+        
+            <h1><a href="#shop">Shop</a></h1>
+            <h1><a href="#cart">Cart</a></h1>
+            <h1><a href="#contactME">Contact</a></h1>
+        <p>At Luku Moto, we believe that every step should be stylish and comfortable. Our curated selection features a wide variety of footwear for every occasion—from trendy sneakers and elegant formal shoes to durable boots and cozy sandals.</p>
+        <p>Whether you’re looking to elevate your everyday look or find the perfect pair for a special event, our collection has something for everyone. With a commitment to quality and customer satisfaction, we strive to provide the best shopping experience possible.</p>
+        <p>Explore our latest arrivals, discover exclusive offers, and let us help you find your perfect fit. Thank you for choosing Luku Moto—where style meets comfort!</p>
+        <h2>Our Products</h2>
+    </section>
+
+    <section id="shop">
+        
+        <!-- Product items will be dynamically inserted here -->
+    </section>
+
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </ul>
+        <p>Total: Ksh<span id="total-price">0.00</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </section>
+
+    <section id="contactME">
+        <h1>Contact Me</h1>
+
+        <form id="contact-form" method="post" action="/send-email">
+            <div class="field name-box">
+                <input type="text" id="name" name="name" placeholder="Who Are You?" autocomplete="name" required />
+                <label for="name">Name</label>
+            </div>
+
+            <div class="field email-box">
+                <input type="email" id="email" name="email" placeholder="name@email.com" autocomplete="email" required />
+                <label for="email">Email</label>
+            </div>
+            <br><br><br>
+            <div class="field msg-box">
+                <textarea id="msg" name="msg" rows="4" placeholder="Your message goes here..." autocomplete="off" required></textarea>
+                <label for="msg">Msg</label>
+            </div>
+
+            <input class="button" type="submit" value="Send" />
+        </form>
+    </section>
+
+    <section id="contactME1">
+        <h3>Contact Information</h3>
+        <p><strong>Location:</strong> 
+            <a href="https://www.google.com/maps/place/Shujaa+Mall/@-1.2810436,36.9031771,17z/data=!3m2!4b1!5s0x182f1381331460b1:0xaef32e8691f72958!4m6!3m5!1s0x182f1381352e1701:0xe7e81ec285be6db3!8m2!3d-1.281049!4d36.905752!16s%2Fg%2F1ygvszp0c?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+                Kayole Spine Road, Nairobi, Shujaa Mall 1st floor Store Sj21
+            </a>
+        </p>
+        <p><strong>Phone:</strong> +254 791 386 234</p>
+        <p><strong>Email:</strong> graphixdev1@gmail.com</p>
+    </section>
+<br><br><br><br>
+    <footer>
+        <p>&copy; 2024 Luku Moto. All rights reserved.</p>
+    </footer>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="/server.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative; /* Allows for absolute positioning of the video */
+    color: #fff;
+    padding: 3rem;
+    text-align: center; 
+    overflow: hidden; /* Prevents overflow */
+}
+
+.header-video {
+    position: absolute; /* Positions video relative to the header */
+    top: 50%;
+    left: 50%;
+    min-width: 100%; /* Ensures video covers the full width */
+    min-height: 100%; /* Ensures video covers the full height */
+    width: auto; /* Maintains aspect ratio */
+    height: auto; /* Maintains aspect ratio */
+    z-index: -1; /* Places the video behind text */
+    transform: translate(-50%, -50%); /* Centers the video */
+}
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section#shop {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    position: relative; /* Added for positioning enlarged image */
+    transition: transform 0.3s ease;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    object-fit: cover; /* Ensure image covers container without distortion */
+}
+
+.product img.enlarge {
+    position: fixed; /* Changed to fixed for viewport positioning */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.0); /* Adjust scale as needed */
+    max-width: 40vw; /* Ensure it doesn't exceed viewport width */
+    max-height: 40vh; /* Ensure it doesn't exceed viewport height */
+    z-index: 1000; /* Ensure it appears above other content */
+    /*border: 5px solid #333; /* Border around the enlarged image */
+    /*border-radius: 8px; /* Optional: Rounded corners for the border */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+section#cart {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+footer {
+    background-color: #6d98cf;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+
+#contactME {
+    background: #efefef;
+    font-size: 62.5%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #B6B6B6;
+  }
+    
+  #contactME {
+    background: white;
+    margin: 60px auto 120px;
+    border-top: 15px solid #002038;
+    text-align: center;
+    padding: 50px 0 110px;
+    width: 80%;
+    max-width: 1100px;
+  }
+  #contactME h1 {
+    margin-bottom: 40px;
+    font-size: 4em;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+  }
+  #contact-form {
+    width: 58.3333333333%;
+    margin: 0 auto;
+  }
+  #contact-form .field {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  #contact-form .field label {
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #002038;
+    width: 100%;
+    padding: 18px 0;
+    font-size: 1.45em;
+    letter-spacing: 0.075em;
+    transition: all 333ms ease-in-out;
+  }
+  #contact-form .field label + span {
+    font-family: 'SSStandard';
+    opacity: 0;
+    color: white;
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 7%;
+    font-size: 2.5em;
+    text-shadow: 1px 2px 0 #cd6302;
+    transition: all 333ms ease-in-out;
+  }
+  #contact-form .field input[type="text"],
+  #contact-form .field textarea {
+    border: none;
+    background: #E8E9EA;
+    width: 80.5%;
+    margin: 0;
+    padding: 18px 0;
+    padding-left: 19.5%;
+    color: #002038;
+    font-size: 1.4em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  #contact-form .field input[type="text"]#msg,
+  #contact-form .field textarea#msg {
+    height: 18px;
+    resize: none;
+    transition: all 333ms ease-in-out;
+  }
+  #contact-form .field input[type="text"]:focus, #contact-form .field input[type="text"].focused,
+  #contact-form .field textarea:focus,
+  #contact-form .field textarea.focused {
+    outline: none;
+  }
+  #contact-form .field input[type="text"]:focus#msg, #contact-form .field input[type="text"].focused#msg,
+  #contact-form .field textarea:focus#msg,
+  #contact-form .field textarea.focused#msg {
+    padding-bottom: 150px;
+  }
+  #contact-form .field input[type="text"]:focus + label, #contact-form .field input[type="text"].focused + label,
+  #contact-form .field textarea:focus + label,
+  #contact-form .field textarea.focused + label {
+    width: 18%;
+    background: #f79600;
+    color: #002038;
+  }
+  #contact-form .field input[type="text"].focused + label,
+  #contact-form .field textarea.focused + label {
+    color: #f79600;
+  }
+  #contact-form .field:hover label {
+    width: 18%;
+    background: #002038;
+    color: white;
+  }
+  #contact-form input[type="submit"] {
+    background: #f79600;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    padding: 13px 50px;
+    font-size: 1.4em;
+    letter-spacing: 0.1em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    transition: all 333ms ease-in-out;
+  }
+  #contact-form input[type="submit"]:hover {
+    background: #002038;
+    color: #f79600;
+  }
+  #contact-form input[type="submit"]:focus {
+    outline: none;
+    background: #cd6302;
+  }
+  @media (max-width:765px) {
+    #contact-form {
+      width: 100%;
+    }
+    #contactME {
+      width: 100%;
+    }
+  }
+  
+
+  #contactME1 h3 {
+    margin-top: 30px; /* Space above the subheading */
+    font-size: 1.8em; /* Size for the heading */
+    color: #002038; /* Dark color for subheading */
+}
+
+#contactME1 p {
+    margin: 5px 0; /* Space between paragraphs */
+    font-size: 1.1em; /* Slightly larger font size */
+    color: #333; /* Dark gray color for text */
+}
+
+#contactME1 a {
+    color: #f79600; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+#contactME1 a:hover {
+    color: #cd6302; /* Darker shade on hover */
+    text-decoration: underline; /* Underline on hover for emphasis */
+}
+
+strong {
+    color: #002038; /* Color for strong text */
+}
+
+
+
+#welcome {
+    background-color: #c0b2b2; /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 2rem; /* Adds padding around the content */
+    margin: 2rem auto; /* Centers the section with margin */
+    max-width: 800px; /* Sets a maximum width */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    text-align: center; /* Centers the text */
+    display: flex; /* Enables Flexbox layout */
+    flex-direction: row; /* Aligns children in a row */
+    justify-content: center; /* Centers items horizontally */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if necessary */
+}
+
+#welcome h1 {
+    font-size: 2.0em; /* Large font size for headings */
+    margin: 1rem; /* Adds space around each heading */
+    color: #6d98cf; /* Primary color */
+}
+
+#welcome h1 a {
+    text-decoration: none; /* Removes underline from links */
+    color: #6d98cf; /* Link color */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+#welcome h1 a:hover {
+    color: #f79600; /* Change color on hover */
+}
+
+#welcome p {
+    font-size: 1.2em; /* Slightly larger font for paragraphs */
+    line-height: 1.6; /* Increases line height for readability */
+    margin: 1rem 0; /* Adds space above and below paragraphs */
+    color: #ffffff; /* Darker text color for better contrast */
+}
+
+#welcome h2 {
+    font-size: 2em; /* Size for subheading */
+    margin: 2rem 0 1rem; /* Space above and below */
+    color: #0f8fe4; /* Dark color for better visibility */
+}
+
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+.popup-content {
+    background-color: #eb1a1a;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+    text-align: center;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
